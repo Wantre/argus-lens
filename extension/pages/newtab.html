@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr" data-theme="nacre">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>ARGUS Lens</title>
+  <link rel="icon" href="../assets/icons/32.png">
+  <link rel="preload" href="../assets/fonts/Inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../ui/styles/tokens.css">
+  <link rel="stylesheet" href="../ui/styles/base.css">
+  <link rel="stylesheet" href="../ui/styles/layout.css">
+  <link rel="stylesheet" href="../ui/styles/components.css">
+  <link rel="stylesheet" href="../ui/styles/views.css">
+  <link rel="stylesheet" href="../ui/styles/motion.css">
+  <script src="../ui/boot.js"></script>
+  <script type="module" src="newtab.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#view">Aller au contenu</a>
+  <div class="backdrop" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="shell" id="shell">
+    <nav class="sidebar" id="sidebar" aria-label="Navigation ARGUS Lens"></nav>
+    <main id="view" tabindex="-1"></main>
+    <button type="button" class="icon-btn mobile-menu" id="mobile-menu" aria-label="Ouvrir la navigation" aria-controls="sidebar" aria-expanded="false"></button>
+  </div>
+  <div id="sr-status" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>

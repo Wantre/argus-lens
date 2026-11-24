@@ -1,0 +1,5 @@
+{
+  "extName": { "message": "ARGUS Lens" },
+  "extDesc": { "message": "Recherche web avancée et enquête OSINT légale : méta-recherche d'index indépendants, archives, preuves horodatées. Tout reste local." },
+  "cmdSidePanel": { "message": "Ouvrir le panneau ARGUS Lens" }
+}

@@ -1,0 +1,71 @@
+/* ARGUS Lens — jetons de design (§7 du cahier). Polices embarquées, aucune ressource distante. */
+@font-face { font-family: 'Inter'; src: url('../../assets/fonts/Inter-var.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'Space Grotesk'; src: url('../../assets/fonts/SpaceGrotesk-var.woff2') format('woff2'); font-weight: 300 700; font-display: swap; }
+@font-face { font-family: 'JetBrains Mono'; src: url('../../assets/fonts/JetBrainsMono-var.woff2') format('woff2'); font-weight: 100 800; font-display: swap; }
+
+:root {
+  --font-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --fs-12: .75rem; --fs-13: .8125rem; --fs-14: .875rem; --fs-16: 1rem; --fs-20: 1.25rem; --fs-28: 1.75rem; --fs-40: 2.5rem; --fs-56: 3.5rem;
+  --r-xs: 6px; --r-sm: 10px; --r-md: 14px; --r-lg: 20px; --r-pill: 999px;
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-focus: cubic-bezier(.2, .8, .2, 1);
+  --ease-pop: cubic-bezier(.34, 1.56, .64, 1);
+  --ease-drawer: cubic-bezier(.32, .72, 0, 1);
+  --sidebar-w: 268px;
+  --dur: 1;
+  color-scheme: light;
+
+  /* Nacre (clair) */
+  --bg: #FFFFFF; --bg-elev: #F7F5FC; --bg-card: #FFFFFF;
+  --bg-grad-a: #FFFFFF; --bg-grad-b: #E9E1FF; --bg-grad-c: #B9A2FF;
+  --primary: #6D3BFF; --primary-hover: #5A2BE6; --primary-soft: #EEE8FF; --on-primary: #FFFFFF;
+  --primary-text: #5A2BE6;
+  --accent: #8F22CC; --accent-soft: #F6E8FF;
+  --cyan: #0B6E90; --cyan-soft: #E3F5FB;
+  --text: #17122B; --text-2: #5B5675; --text-3: #6E6987;
+  --border: #E6E1F2; --border-strong: #D3CBEA;
+  --success: #136E4D; --warning: #9A5F00; --danger: #C62F45;
+  --success-soft: #E5F6EE; --warning-soft: #FFF3DC; --danger-soft: #FDE8EB;
+  --mark: #E4D6FF;
+  --glass: rgba(255, 255, 255, .72);
+  --glass-border: rgba(109, 59, 255, .14);
+  --sh-1: 0 1px 2px rgba(23, 18, 43, .06);
+  --sh-2: 0 6px 20px -6px rgba(76, 40, 180, .18);
+  --sh-3: 0 20px 50px -12px rgba(76, 40, 180, .28);
+  --focus: 0 0 0 3px rgba(109, 59, 255, .35);
+  --overlay: rgba(23, 18, 43, .32);
+}
+
+[data-theme='amethyste'], [data-theme='nuit'] {
+  color-scheme: dark;
+  --bg: #0E0920; --bg-elev: #171030; --bg-card: #150E2C;
+  --bg-grad-a: #1A0F3D; --bg-grad-b: #2B1468; --bg-grad-c: #4B1FA8;
+  --primary: #8B6CFF; --primary-hover: #A28BFF; --primary-soft: #2A1D57; --on-primary: #0E0920;
+  --primary-text: #B9A6FF;
+  --accent: #D27BFF; --accent-soft: #3A1B52;
+  --cyan: #5FD3F5; --cyan-soft: #10324A;
+  --text: #F2EEFF; --text-2: #B7AED6; --text-3: #A39AC6;
+  --border: #2C2350; --border-strong: #3D3270;
+  --success: #3CCB8F; --warning: #F2B84B; --danger: #FF6B81;
+  --success-soft: #0F3327; --warning-soft: #3A2A0B; --danger-soft: #3D1420;
+  --mark: rgba(139, 108, 255, .42);
+  --glass: rgba(23, 16, 48, .72);
+  --glass-border: rgba(162, 139, 255, .18);
+  --sh-1: 0 0 0 1px rgba(139, 108, 255, .14);
+  --sh-2: 0 0 0 1px rgba(139, 108, 255, .25), 0 10px 40px -10px rgba(139, 108, 255, .35);
+  --sh-3: 0 0 0 1px rgba(139, 108, 255, .3), 0 24px 60px -16px rgba(139, 108, 255, .45);
+  --focus: 0 0 0 3px rgba(162, 139, 255, .55);
+  --overlay: rgba(5, 2, 14, .6);
+}
+
+[data-theme='nuit'] {
+  --bg: #0A0619; --bg-elev: #130C2A;
+  --bg-grad-a: #0A0619; --bg-grad-b: #1E0D4F; --bg-grad-c: #4B1FA8;
+}
+
+[data-density='compact'] { --fs-14: .8125rem; }
+[data-motion='none'], [data-motion='reduced'] { --dur: 0; }
+@media (prefers-reduced-motion: reduce) { :root { --dur: 0; } }
